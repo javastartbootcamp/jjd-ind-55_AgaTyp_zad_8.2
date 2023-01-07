@@ -2,7 +2,7 @@ package pl.javastart.task;
 
 import java.text.DecimalFormat;
 
-public class GiftTicket extends StandardTicket{
+public class GiftTicket extends StandardTicket {
     private static final double GIFT_FEE = 0.05;
 
     public GiftTicket(String name, String place, String type, double price, double discount) {

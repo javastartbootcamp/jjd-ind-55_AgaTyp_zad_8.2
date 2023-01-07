@@ -21,7 +21,7 @@ public class Orders {
     String getInfo() {
         String result = "";
         for (int i = 0; i < ordersNo; i++) {
-            result = result + tickets[i].getInfo() +tickets[i].getCalcPrice() + "\n";
+            result = result + tickets[i].getInfo() + tickets[i].getCalcPrice() + "\n";
         }
         return result;
     }
