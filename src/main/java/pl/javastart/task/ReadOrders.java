@@ -17,7 +17,7 @@ public class ReadOrders {
     private static final int ADD_GIFT = 3;
 
     private Scanner sc = new Scanner(System.in);
-    sc.useLocale(Locale.US);
+//    sc.useLocale(Locale.US);
 
     public void close() {
         sc.close();
