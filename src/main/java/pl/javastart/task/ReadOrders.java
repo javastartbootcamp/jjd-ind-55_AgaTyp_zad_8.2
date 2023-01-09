@@ -55,13 +55,13 @@ public class ReadOrders {
 
     }
 
-    public OnlineTicket createOrder() {
+    public Ticket createOrder() {
         if (type == ADD_ONLINE) {
-            return new OnlineTicket(name, place, "bilet internetowy", price, discount);
+            return new Ticket(name, place, "bilet internetowy", price, discount);
         } else if (type == ADD_STANDARD) {
-            return new StandardTicket(name, place, "bilet standardowy", price, discount);
+            return new Ticket(name, place, "bilet standardowy", price, discount);
         } else if (type == ADD_GIFT) {
-            return new GiftTicket(name, place, "bilet prezentowy", price, discount);
+            return new Ticket(name, place, "bilet prezentowy", price, discount);
         } else {
             System.out.println("Nie ma takiego typu biletu.");
         }

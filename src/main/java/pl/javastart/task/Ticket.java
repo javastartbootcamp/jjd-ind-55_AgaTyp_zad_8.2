@@ -1,45 +1,45 @@
 package pl.javastart.task;
 
-public class OnlineTicket {
-    private static int ticketId = 0;
+public class Ticket {
+    private static int ticketNo = 0;
+    private int ticketId;
     private String name;
     private String place;
     private String type;
     private double price;
     private double discount;
 
-    public OnlineTicket(String name, String place, String type, double price, double discount) {
+
+    public Ticket(String name, String place, String type, double price, double discount) {
         this.name = name;
         this.place = place;
         this.type = type;
         this.price = price;
         this.discount = discount;
+        this.ticketId = ticketNo;
 
-        ticketId++;
-    }
-
-    public double calcPrice() {
-        double price;
-        price = this.price - (this.price * this.discount);
-
-        return price;
+        ticketNo++;
     }
 
     public String getInfo() {
-        return "Bilet na: " + name + ", miejsce: " + place + ", typ biletu: " + type + ", cena podstawowa: " + price
+        return "id biletu: " + ticketId + ", bilet na: " + name + ", miejsce: " + place + ", typ biletu: " + type + ", cena podstawowa: " + price
                 + ", zniżka: " + discount * 100 + "%";
     }
 
-    public String getCalcPrice() {
-        return ", do zapłaty: " + calcPrice();
+    public static int getTicketNo() {
+        return ticketNo;
     }
 
-    public static int getTicketId() {
+    public static void setTicketNo(int ticketId) {
+        Ticket.ticketNo = ticketId;
+    }
+
+    public int getTicketId() {
         return ticketId;
     }
 
-    public static void setTicketId(int ticketId) {
-        OnlineTicket.ticketId = ticketId;
+    public void setTicketId(int ticketId) {
+        this.ticketId = ticketId;
     }
 
     public String getName() {
@@ -81,4 +81,5 @@ public class OnlineTicket {
     public void setDiscount(double discount) {
         this.discount = discount;
     }
+
 }
