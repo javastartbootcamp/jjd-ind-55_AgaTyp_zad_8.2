@@ -8,8 +8,7 @@ public class Ticket {
     private String type;
     private double price;
     private double discount;
-
-
+    
     public Ticket(String name, String place, String type, double price, double discount) {
         this.name = name;
         this.place = place;
